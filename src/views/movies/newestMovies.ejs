@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas ordenas por fecha</title>
+    <link rel='stylesheet' href='/css/style.css' />
+</head>
+<body>
+    <figure>
+        <a href="/"><img src="/img/logo-DH.png" alt="Logo Digital House"></a>
+    </figure>
+    <br>
+    <h1>ÚLTIMAS 5 PELÍCULAS ESTRENADAS</h1>
+    <br><br>
+    <ul>
+        <% for( let i = 0; i < movies.length; i++ ) { %>
+            <li>
+                <strong><a href="/movies/detail/<%=movies[i].id%>"><%= movies[i].title %></a></strong> <br><br>
+                <%= 'FECHA DE ESTRENO: ' + movies[i].release_date %>
+                <br><br><br>
+            </li>
+        <% } %>
+        
+    </ul>
+</body>
+</html>
