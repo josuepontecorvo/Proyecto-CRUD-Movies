@@ -19,5 +19,15 @@
     <% if (actor.favorite_movie_id) { %>
         <p><strong>PELÍCULA FAVORITA:</strong> <%= actor.favorite_movie_id %></p>
     <% } %>
+    <br>
+    <p><strong>MOVIES:</strong></p>
+    <ul style="padding-left: 30px">
+        <% actor.movies.forEach(movie => { %>
+            <li>
+                <%= movie.title %>
+        <% }) %>
+        
+    </ul>
+    <br>
 </body>
 </html>
